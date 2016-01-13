@@ -30,7 +30,7 @@ NB: chaque roles possedera un tags specifique afin de vous permettre de les inst
 ### Role DEVC
 
 Le role ``DEVC`` n'a besoin que de deux variables pour fonctionner.
-Il s'agit des variables ``login`` et ``name`` situees dans le fichier ``ansible-playbook-etna/group_vars/all
+Il s'agit des variables ``login`` et ``name`` situees dans le fichier ``ansible-playbook-etna/group_vars/all``
 
 Une fois ces variables en place il vous suffit de lancer la commande :
 
