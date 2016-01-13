@@ -1,0 +1,6 @@
+---
+# Simple configuration for debian8
+
+- name: configure a vagrant box for the DEVC module
+  hosts: devc
+  remote_user: vagrant

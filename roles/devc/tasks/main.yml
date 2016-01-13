@@ -1,0 +1,18 @@
+---
+# Install all packages and files
+
+- name: Install emacs and build-essential
+  apt: name={{ item }} state=present
+  sudo: yes
+  with_items:
+    - build-essential
+    - emacs
+
+- name: Setup emacs base configuration
+  template: src=emacs.j2 dest=~/.emacs
+
+- name: Create emacs.d directory
+  file: path=~/.emacs.d/ state=directory
+
+- name: Setup emacs advanced configuration
+  template: src=std_comment.el.j2 dest=~/.emacs.d/std_comment.el
