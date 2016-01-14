@@ -35,3 +35,14 @@ Il s'agit des variables ``login`` et ``name`` situees dans le fichier ``ansible-
 Une fois ces variables en place il vous suffit de lancer la commande :
 
 ``ansible-playbook playbook.yml -i hosts --tags "devc"``
+
+Ce role vous fourni emacs installe et configure ainsi que les paquets necessaire pour les differents modules C
+
+### Role LAMP
+
+Le role ``LAMP`` n'a pas besoin de variables pour fonctionner.
+
+Ce role installe sur une machine virtuelle tout le necessaire pour travailler sur un environnement LAMP (linux apache mysql php).
+Il vous permet de travailler simplement en vous fournissant une version d'apache fonctionnelle est configuree pour ne pas avoir de probleme de droits pendant les deploiements ou encore pour eviter la fameuse manie du ``chmod -R 777``
+
+Il place donc le repertoire de travail apache a la racine de votre repertoire utilisateur sur vagrant (``/home/vagrant/www``)
