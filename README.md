@@ -46,3 +46,7 @@ Ce role installe sur une machine virtuelle tout le necessaire pour travailler su
 Il vous permet de travailler simplement en vous fournissant une version d'apache fonctionnelle est configuree pour ne pas avoir de probleme de droits pendant les deploiements ou encore pour eviter la fameuse manie du ``chmod -R 777``
 
 Il place donc le repertoire de travail apache a la racine de votre repertoire utilisateur sur vagrant (``/home/vagrant/www``)
+
+Pour lancer la configuration et l'installation, il vous suffit de taper :
+
+``ansible-playbook playbook.yml -i hosts --tags "devc"``
