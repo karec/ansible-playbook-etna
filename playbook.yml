@@ -5,3 +5,9 @@
   remote_user: vagrant
   roles:
     - { role: devc, tags: ['devc'] }
+
+- name: configure a vagrant box with lamp env
+  hosts: lamp
+  remote_user: vagrant
+  roles:
+    - { role: lamp, tags: ['lamp'] }

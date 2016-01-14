@@ -1,0 +1,6 @@
+---
+# Simple lamp configuration for debian8
+
+- name: configure a vagrant box with LAMP env
+  hosts: lamp
+  remote_user: vagrant

@@ -3,3 +3,6 @@ dev1 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2222 ansible_ssh_user='vagrant'
 
 [devc]
 dev1
+
+[lamp]
+dev1

@@ -1,0 +1,14 @@
+---
+# Install and configure the mysql database
+
+- name: Install mysql and mysql php
+  apt: name={{ item }} state=present
+  become: yes
+  become_method: sudo
+  with_items:
+    - mysql-server
+    - mysql-client
+    - php5-mysql
+
+- name: Start mysql service
+  service: name=mysql state=started enabled=yes

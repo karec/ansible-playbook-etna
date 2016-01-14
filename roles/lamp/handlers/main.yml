@@ -1,0 +1,7 @@
+---
+# Handler for apache and mysql updates
+
+- name: restart apache2
+  become: yes
+  become_method: sudo
+  service: name=apache2 state=restarted

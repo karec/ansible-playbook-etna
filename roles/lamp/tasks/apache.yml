@@ -1,0 +1,37 @@
+---
+# Install and configure apache
+
+- name: Install php and apache
+  apt: name={{ item }} state=present
+  become: yes
+  become_method: sudo
+  with_items:
+    - apache2
+    - php5
+    - libapache2-mod-php5
+    - git
+    - subversion
+
+- name: Start apache service
+  service: name=apache2 state=started enabled=yes
+
+- name: Create user working directory
+  file: path=~/www/ state=directory
+
+- name: Copy the apache configuration
+  become: yes
+  become_method: sudo
+  template: src=devsite.conf.j2 dest=/etc/apache2/sites-available/000-default.conf
+  notify: restart apache2
+
+- name: Copy the apache env vars
+  become: yes
+  become_method: sudo
+  template: src=envvars.j2 dest=/etc/apache2/envvars
+  notify: restart apache2
+
+- name: Copy the apache configuration
+  become: yes
+  become_method: sudo
+  template: src=apache2.conf.j2 dest=/etc/apache2/apache2.conf
+  notify: restart apache2
