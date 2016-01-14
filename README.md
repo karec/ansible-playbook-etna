@@ -49,4 +49,4 @@ Il place donc le repertoire de travail apache a la racine de votre repertoire ut
 
 Pour lancer la configuration et l'installation, il vous suffit de taper :
 
-``ansible-playbook playbook.yml -i hosts --tags "devc"``
+``ansible-playbook playbook.yml -i hosts --tags "lamp"``
