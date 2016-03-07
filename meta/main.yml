@@ -1,0 +1,14 @@
+galaxy_info:
+  author: karec
+  company: karec
+  description: "tests"
+  min_ansible_version: 1.9.4
+  license: MIT
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  categories:
+    - web
+
+dependencies: []
